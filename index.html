@@ -1,183 +1,425 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kedai Kopi Alvin</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kopi & Teman</title>
 
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #f4eee8;
-            color: #3b2416;
-        }
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        header {
-            background: #5c331d;
-            color: white;
-            text-align: center;
-            padding: 25px;
-        }
+body {
+    background: #100a07;
+    color: white;
+    font-family: Georgia, serif;
+}
 
-        header h1 {
-            margin: 0;
-        }
+/* HEADER */
+header {
+    background: #0d0806;
+    padding: 18px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
-        nav {
-            background: #3b2113;
-            text-align: center;
-            padding: 12px;
-        }
+.logo {
+    font-size: 27px;
+    font-weight: bold;
+    color: #f2dfc4;
+}
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 15px;
-            font-weight: bold;
-        }
+nav {
+    display: flex;
+    gap: 30px;
+}
 
-        .container {
-            max-width: 1000px;
-            margin: 30px auto;
-            padding: 15px;
-        }
+nav a {
+    color: white;
+    text-decoration: none;
+}
 
-        .menu {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-        }
+.pesan-atas {
+    background: #25d866;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
 
-        .card {
-            background: white;
-            width: 280px;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-            text-align: center;
-        }
+/* HERO */
+.hero {
+    min-height: 330px;
+    padding: 65px 7%;
+    display: flex;
+    align-items: center;
 
-        .card img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-        }
+    background:
+        linear-gradient(90deg, #160b06e8, #160b0640),
+        url("https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1600&q=85");
 
-        .card h2 {
-            margin-bottom: 5px;
-        }
+    background-size: cover;
+    background-position: center;
+}
 
-        .card p {
-            padding: 0 15px;
-        }
+.hero small {
+    font-size: 20px;
+    letter-spacing: 4px;
+}
 
-        .harga {
-            font-weight: bold;
-            color: #8b4513;
-            font-size: 18px;
-        }
+.hero h1 {
+    font-size: 65px;
+    color: #f3e7d7;
+    margin: 10px 0;
+}
 
-        .pesan {
-            display: inline-block;
-            background: #25D366;
-            color: white;
-            padding: 10px 20px;
-            margin: 10px 0 20px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: bold;
-        }
+.hero p {
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+}
 
-        footer {
-            background: #3b2113;
-            color: white;
-            text-align: center;
-            padding: 20px;
-            margin-top: 30px;
-        }
-    </style>
+/* MENU */
+.menu {
+    padding: 45px 7% 60px;
+}
+
+.menu-title {
+    text-align: center;
+    font-size: 40px;
+    color: #f0d5ae;
+    margin-bottom: 30px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.card {
+    background: #291a12;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px #0008;
+}
+
+.card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 27px;
+}
+
+.card h2 {
+    color: #f1d3aa;
+    font-size: 27px;
+    margin-bottom: 18px;
+}
+
+.card p {
+    font-size: 19px;
+    line-height: 1.7;
+    min-height: 100px;
+}
+
+.price {
+    font-size: 22px;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+.order {
+    display: inline-block;
+    background: #25d866;
+    color: white;
+    text-decoration: none;
+    padding: 14px 24px;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.order:hover,
+.pesan-atas:hover {
+    background: #1fc15a;
+}
+
+/* KONTAK */
+.contact {
+    text-align: center;
+    background: #0d0806;
+    padding: 45px 20px;
+}
+
+.contact h2 {
+    color: #f0d5ae;
+    font-size: 36px;
+    margin-bottom: 12px;
+}
+
+.contact p {
+    font-family: Arial, sans-serif;
+    margin-bottom: 20px;
+}
+
+.phone {
+    margin-top: 20px;
+    font-family: Arial, sans-serif;
+    font-size: 23px;
+    font-weight: bold;
+}
+
+/* FOOTER */
+footer {
+    background: #070403;
+    text-align: center;
+    padding: 20px;
+    color: #aaa;
+}
+
+/* HP */
+@media (max-width: 700px) {
+
+    header {
+        display: none;
+    }
+
+    .hero {
+        min-height: 250px;
+        padding: 45px 28px;
+    }
+
+    .hero small {
+        font-size: 14px;
+    }
+
+    .hero h1 {
+        font-size: 43px;
+    }
+
+    .hero p {
+        font-size: 15px;
+    }
+
+    .menu {
+        padding: 35px 0;
+    }
+
+    .menu-title {
+        font-size: 32px;
+    }
+
+    .cards {
+        display: block;
+        padding: 0 54px;
+    }
+
+    .card {
+        margin-bottom: 35px;
+    }
+
+    .card img {
+        height: 300px;
+    }
+
+    .card-body {
+        padding: 27px;
+    }
+
+    .card h2 {
+        font-size: 25px;
+    }
+
+    .card p {
+        font-size: 18px;
+        min-height: auto;
+    }
+}
+</style>
 </head>
 
 <body>
 
+<!-- HEADER -->
 <header>
-    <h1>☕ Kedai Kopi Alvin</h1>
-    <p>Menu sederhana, rasa luar biasa!</p>
+
+    <div class="logo">
+        ☕ Kopi & Teman
+    </div>
+
+    <nav>
+        <a href="#beranda">Beranda</a>
+        <a href="#menu">Menu</a>
+        <a href="#pesan">Pesan</a>
+    </nav>
+
+    <a class="pesan-atas"
+       href="https://wa.me/6282345678901?text=Halo%2C%20saya%20ingin%20memesan"
+       target="_blank">
+       💬 Pesan Sekarang
+    </a>
+
 </header>
 
-<nav>
-    <a href="#menu">Menu</a>
-    <a href="#pesanan">Pesanan</a>
-</nav>
 
-<div class="container" id="menu">
+<!-- HERO -->
+<section class="hero" id="beranda">
 
-    <h1 style="text-align:center;">Daftar Menu</h1>
+    <div>
 
-    <div class="menu">
+        <small>SELAMAT DATANG DI</small>
+
+        <h1>Kopi & Teman</h1>
+
+        <p>
+            Nikmati rasa khas dan pengalaman berbeda
+            dari menu andalan kami.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- MENU -->
+<section class="menu" id="menu">
+
+    <h2 class="menu-title">
+        ☕ Menu Kami
+    </h2>
+
+    <div class="cards">
+
 
         <!-- KOPI ROBUSTA -->
         <div class="card">
-            <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=600&q=80"
-                 alt="Kopi Robusta">
 
-            <h2>☕ Kopi Robusta</h2>
-            <p>Kopi dengan rasa kuat dan aroma khas yang cocok untuk menemani aktivitas.</p>
-            <p class="harga">Rp10.000</p>
+            <img
+            src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=900&q=85"
+            alt="Kopi Robusta">
 
-            <a class="pesan"
-               href="https://wa.me/6289669167719?text=Halo,%20saya%20mau%20pesan%20Kopi%20Robusta">
-               Pesan
-            </a>
+            <div class="card-body">
+
+                <h2>☕ Kopi Robusta</h2>
+
+                <p>
+                    Rasa kuat, aroma khas, dan cocok
+                    untuk pecinta kopi sejati.
+                </p>
+
+                <div class="price">
+                    Rp8.000
+                </div>
+
+                <a class="order"
+                   href="https://wa.me/6289669167719?text=Halo%2C%20saya%20mau%20pesan%20Kopi%20Robusta"
+                   target="_blank">
+                   📱 &nbsp; Pesan Sekarang
+                </a>
+
+            </div>
+
         </div>
 
-        <!-- KELOMANG -->
+
+        <!-- KEONG -->
         <div class="card">
-            <img src="https://images.unsplash.com/photo-1525490829609-d166ddb58678?auto=format&fit=crop&w=600&q=80"
-                 alt="Kelomang">
 
-            <h2>🐚 Kelomang</h2>
-            <p>Menu unik dengan nama yang menarik dan cocok untuk dicoba.</p>
-            <p class="harga">Rp15.000</p>
+            <img
+            src="https://images.unsplash.com/photo-1506919258185-6078bba55d2a?auto=format&fit=crop&w=900&q=85"
+            alt="Keong">
 
-            <a class="pesan"
-               href="https://wa.me/6289669167719?text=Halo,%20saya%20mau%20pesan%20Kelomang">
-               Pesan
-            </a>
+            <div class="card-body">
+
+                <h2>🐌 Keong</h2>
+
+                <p>
+                    Menu keong dengan rasa gurih dan
+                    cocok dinikmati bersama teman.
+                </p>
+
+                <div class="price">
+                    Rp15.000
+                </div>
+
+                <a class="order"
+                   href="https://wa.me/6282345678901?text=Halo%2C%20saya%20mau%20pesan%20Keong"
+                   target="_blank">
+                   📱 &nbsp; Pesan Sekarang
+                </a>
+
+            </div>
+
         </div>
+
 
         <!-- BOTI -->
         <div class="card">
-            <img src="https://images.unsplash.com/photo-1520975958225-7d61b5e2e7e1?auto=format&fit=crop&w=600&q=80"
-                 alt="Boti">
 
-            <h2>🏳️‍🌈 Boti</h2>
-            <p>Menu dengan konsep unik dan nama yang berbeda dari menu lainnya.</p>
-            <p class="harga">Rp12.000</p>
+            <img
+            src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=900&q=85"
+            alt="Boti">
 
-            <a class="pesan"
-               href="https://wa.me/6289669167719?text=Halo,%20saya%20mau%20pesan%20Boti">
-               Pesan
-            </a>
+            <div class="card-body">
+
+                <h2>💃 Boti</h2>
+
+                <p>
+                    Hiburan unik dengan laki-laki yang
+                    tampil menggunakan gaya feminin.
+                </p>
+
+                <div class="price">
+                    Rp10.000
+                </div>
+
+                <a class="order"
+                   href="https://wa.me/6289669167719?text=Halo%2C%20saya%20mau%20pesan%20Boti"
+                   target="_blank">
+                   📱 &nbsp; Pesan Sekarang
+                </a>
+
+            </div>
+
         </div>
 
     </div>
-</div>
 
-<div class="container" id="pesanan" style="text-align:center;">
-    <h2>📱 Pesan Sekarang</h2>
-    <p>Klik tombol di bawah untuk melakukan pemesanan melalui WhatsApp.</p>
+</section>
 
-    <a class="pesan"
-       href="https://wa.me/628969167719?text=Halo,%20saya%20ingin%20memesan%20menu">
-       💬 Pesan via WhatsApp
+
+<!-- PESAN -->
+<section class="contact" id="pesan">
+
+    <h2>📞 Pesan Sekarang</h2>
+
+    <p>
+        Hubungi kami melalui WhatsApp untuk melakukan pemesanan.
+    </p>
+
+    <a class="order"
+       href="https://wa.me/628969167719?text=Halo%2C%20saya%20ingin%20memesan"
+       target="_blank">
+       💬 WhatsApp
     </a>
-</div>
 
+    <div class="phone">
+        0896 6916 7719
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
 <footer>
-    <p>© 2026 Kedai Kopi Alvin</p>
+    © 2026 Kopi & Teman. Selamat menikmati! ☕
 </footer>
 
 </body>
