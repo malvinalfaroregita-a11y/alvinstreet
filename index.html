@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kopi & Teman</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #1b120d;
+            color: white;
+        }
+
+        header {
+            background: #0e0907;
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            color: #f3d5a5;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 25px;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 80px 20px;
+            background: linear-gradient(#0008, #0008),
+                        url("https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1600&q=80");
+            background-size: cover;
+            background-position: center;
+        }
+
+        .hero h2 {
+            font-size: 48px;
+            margin-bottom: 15px;
+            color: #f5d6a6;
+        }
+
+        .hero p {
+            font-size: 18px;
+        }
+
+        .menu {
+            padding: 50px 8%;
+        }
+
+        .menu h2 {
+            text-align: center;
+            color: #f3d5a5;
+            margin-bottom: 35px;
+            font-size: 35px;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .card {
+            background: #2a1b13;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px #0008;
+        }
+
+        .card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 20px;
+        }
+
+        .card h3 {
+            color: #f3d5a5;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            color: #ddd;
+            margin-bottom: 15px;
+            line-height: 1.5;
+        }
+
+        .price {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .order {
+            display: inline-block;
+            background: #25d366;
+            color: white;
+            text-decoration: none;
+            padding: 12px 18px;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+
+        .contact {
+            text-align: center;
+            padding: 50px 20px;
+            background: #0e0907;
+        }
+
+        .contact h2 {
+            color: #f3d5a5;
+            margin-bottom: 15px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #080504;
+            color: #aaa;
+        }
+
+        @media (max-width: 800px) {
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h2 {
+                font-size: 35px;
+            }
+
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>☕ Kopi & Teman</h1>
+
+    <nav>
+        <a href="#beranda">Beranda</a>
+        <a href="#menu">Menu</a>
+        <a href="#pesan">Pesan</a>
+    </nav>
+</header>
+
+<section class="hero" id="beranda">
+    <h2>Selamat Datang</h2>
+    <p>Nikmati menu unik dan minuman pilihan kami.</p>
+</section>
+
+<section class="menu" id="menu">
+
+    <h2>Menu Kami</h2>
+
+    <div class="cards">
+
+        <!-- KOPI ROBUSTA -->
+        <div class="card">
+            <img
+                src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=800&q=80"
+                alt="Kopi Robusta">
+
+            <div class="card-content">
+                <h3>☕ Kopi Robusta</h3>
+
+                <p>
+                    Kopi dengan rasa kuat dan aroma khas,
+                    cocok untuk menemani waktu santai.
+                </p>
+
+                <div class="price">Rp8.000</div>
+
+                <a class="order"
+                   href="https://wa.me/6289669167719?text=Halo%2C%20saya%20mau%20pesan%20Kopi%20Robusta"
+                   target="_blank">
+                    📱 Pesan Sekarang
+                </a>
+            </div>
+        </div>
+
+
+        <!-- KLOMANG -->
+        <div class="card">
+            <img
+                src="https://images.unsplash.com/photo-1544943910-4c1dc44aab44?auto=format&fit=crop&w=800&q=80"
+                alt="Klomang">
+
+            <div class="card-content">
+                <h3>🦀 Klomang</h3>
+
+                <p>
+                    Menu klomang dengan rasa gurih
+                    dan cocok dinikmati bersama teman.
+                </p>
+
+                <div class="price">Rp15.000</div>
+
+                <a class="order"
+                   href="https://wa.me/6289669167719?text=Halo%2C%20saya%20mau%20pesan%20Klomang"
+                   target="_blank">
+                    📱 Pesan Sekarang
+                </a>
+            </div>
+        </div>
+
+
+        <!-- BOTI -->
+        <div class="card">
+            <img
+                src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=80"
+                alt="Boti">
+
+            <div class="card-content">
+                <h3>💃 Boti</h3>
+
+                <p>
+                    Hiburan unik dengan laki-laki yang
+                    tampil menggunakan gaya feminin.
+                </p>
+
+                <div class="price">Rp10.000</div>
+
+                <a class="order"
+                   href="https://wa.me/6289669167719?text=Halo%2C%20saya%20mau%20pesan%20Boti"
+                   target="_blank">
+                    📱 Pesan Sekarang
+                </a>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+<section class="contact" id="pesan">
+    <h2>📞 Pesan Sekarang</h2>
+
+    <p>Hubungi kami melalui WhatsApp:</p>
+
+    <br>
+
+    <a class="order"
+       href="https://wa.me/6289669167719?text=Halo%2C%20saya%20ingin%20memesan"
+       target="_blank">
+        💬 WhatsApp: 0896 6916 7719
+    </a>
+</section>
+
+
+<footer>
+    © 2026 Kopi & Teman — Selamat menikmati ☕
+</footer>
+
+</body>
+</html>
